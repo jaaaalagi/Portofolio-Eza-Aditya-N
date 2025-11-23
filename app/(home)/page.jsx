@@ -32,7 +32,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm"
               >
-                <span>Get In Touch</span>
+                <span>Contact Me </span>
                 <HiArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </motion.button>
             </Link>

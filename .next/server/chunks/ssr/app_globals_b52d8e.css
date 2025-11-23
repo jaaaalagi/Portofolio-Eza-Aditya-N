@@ -1826,11 +1826,6 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-primary\/5 {
-  --tw-shadow-color: hsl(var(--primary) / .05);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .outline {
   outline-style: solid;
 }
@@ -2317,11 +2312,6 @@ body {
   --tw-shadow: 0 4px 6px #00000080, 0 0 20px #ffffff1a;
   --tw-shadow-colored: 0 4px 6px var(--tw-shadow-color), 0 0 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.hover\:shadow-primary\/10:hover {
-  --tw-shadow-color: hsl(var(--primary) / .1);
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:ring-2:hover {
@@ -2940,10 +2930,6 @@ body {
 
   .md\:w-8 {
     width: 2rem;
-  }
-
-  .md\:w-auto {
-    width: auto;
   }
 
   .md\:grid-cols-4 {

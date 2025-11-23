@@ -3,6 +3,9 @@
     "[project]/app/(home)/page": [
       "static/media/GeistVF-s.p.7fe29570.woff"
     ],
+    "[project]/app/(projects)/projects/page": [
+      "static/media/GeistVF-s.p.7fe29570.woff"
+    ],
     "[project]/app/(contact)/contact/page": [
       "static/media/GeistVF-s.p.7fe29570.woff"
     ]

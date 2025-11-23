@@ -41,7 +41,7 @@ const ContactPage = () => {
                     className="text-center space-y-4 mb-12 sm:mb-16 w-full"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
-                        Get In Touch
+                        Welcome to the Contact Page 
                     </h2>
                     <p className="text-muted-foreground max-w-xl mx-auto text-sm sm:text-base px-4">
                         Have a project in mind? Looking to collaborate? Drop me a message,

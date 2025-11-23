@@ -3,7 +3,7 @@ import { HiCode, HiCube, HiDatabase, HiMail, HiBriefcase } from "react-icons/hi"
 
 export const config = {
     developer: {
-        name: "Eza Aditya Nugroho",
+        name: "Eza Aditya N",
     },
     social: {
         github: "jaaaalagi",
@@ -17,45 +17,45 @@ export const config = {
     projects: [
         {
             id: 1,
-            title: "AI-Powered Code Review Assistant",
-            description: "An intelligent code review platform that uses machine learning to analyze pull requests, detect bugs, suggest optimizations, and enforce coding standards. Features real-time collaboration, automated testing integration, and comprehensive security scanning.",
-            image: "/projects/project-1.webp",
-            technologies: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL", "Docker"],
+            title: "Moneaze Financial Management App",
+            description: "A financial management solution for personal and business budgeting. Delivered high-fidelity designs and interactive prototypes to simplify cash flow tracking.",
+            image: "/projects/Moneaze 1.png",
+            technologies: ["Figma", "UI/UX Design", "Mobile App", "Prototype"],
             github: "#",
             demo: "#"
         },
         {
             id: 2,
-            title: "Real-time Collaborative Whiteboard",
-            description: "A next-generation collaborative whiteboard platform with infinite canvas, real-time synchronization, and advanced drawing tools. Supports video conferencing, screen sharing, and export to multiple formats. Built for remote teams and educators.",
-            image: "/projects/project-2.webp",
-            technologies: ["TypeScript", "WebRTC", "Socket.io", "Canvas API", "Node.js", "Redis"],
+            title: "CheckMyKicks Website",
+            description: "A web platform for sneaker authenticity verification (legit check). Handled the end-to-end process from UI/UX prototyping in Figma to Front-End implementation using React.js.",
+            image: "/projects/project-2.png",
+            technologies: ["Figma", "Web Design", "React.js", "JavaScript"],
             github: "#",
-            demo: "#"
+            demo: "https://www.checkmykicks.my.id/"
         },
         {
             id: 3,
-            title: "Blockchain Voting System",
-            description: "A secure, transparent, and decentralized voting platform built on Ethereum. Features smart contract-based voting, anonymous ballots, real-time result tracking, and immutable audit trails. Ensures election integrity through cryptographic verification.",
-            image: "/projects/project-3.webp",
-            technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS", "MetaMask"],
+            title: "ArchiDeck: Elevating Architectural Design with Modern UI/UX Innovation",
+            description: "Designed an intuitive UI/UX and interactive prototypes for ArchiDeck, an innovative platform connecting architects and clients. Focused on creating a seamless, user-friendly experience that highlights architectural designs and builds a strong brand identity.",
+            image: "/projects/project-3.png",
+            technologies: ["Figma", "UI/UX Design", "Prototyping", "Branding"],
             github: "#",
             demo: "#"
         },
         {
             id: 4,
-            title: "Cloud Infrastructure Dashboard",
-            description: "A comprehensive cloud management platform for monitoring, managing, and optimizing multi-cloud infrastructure. Features real-time metrics, cost analysis, automated scaling, and security compliance monitoring across AWS, Azure, and GCP.",
-            image: "/projects/project-4.webp",
-            technologies: ["Go", "Kubernetes", "Grafana", "Prometheus", "Terraform", "React"],
+            title: "Crafting a Complete Brand Identity for ArchiDeck from Logo to Visual System",
+            description: "Designed a full brand identity for ArchiDeck, including logo creation, custom typography, color palette, and branding elements, ensuring a professional, cohesive, and impactful visual identity that reflects the brand’s essence.",
+            image: "/projects/project-4.png",
+            technologies: ["Brand Identity Design", "Graphic Design", "Design Strategy", "Custom Typography", "Figma"],
             github: "#",
             demo: "#"
         },
         {
             id: 5,
-            title: "Neural Network Visualizer",
-            description: "An interactive web application for visualizing, training, and experimenting with neural networks. Features drag-and-drop architecture builder, real-time training visualization, model comparison tools, and export capabilities for production deployment.",
-            image: "/projects/project-5.webp",
+            title: "Annual Calendar Design for Majelis Taklim Al-Khairat",
+            description: "Created a personalized annual calendar for Majelis Taklim Al-Khairat, from theme selection to photo curation and layout design. Delivered a polished final product that effectively combined visuals and branding, resulting in client satisfaction.",
+            image: "/projects/project-5.png",
             technologies: ["Python", "TensorFlow.js", "D3.js", "Next.js", "WebGL", "TypeScript"],
             github: "#",
             demo: "#"
@@ -70,11 +70,9 @@ export const config = {
             bgClass: "bg-blue-500/10",
             iconClass: "text-blue-500",
             skills: [
-                { name: "Next.js 15", level: "Advanced", hot: true },
                 { name: "React", level: "Advanced" },
-                { name: "TailwindCSS", level: "Expert" },
+                { name: "TailwindCSS", level: "Advanced" },
                 { name: "JavaScript", level: "Advanced" },
-                { name: "Framer Motion", level: "Intermediate" }
             ]
         },
         {
