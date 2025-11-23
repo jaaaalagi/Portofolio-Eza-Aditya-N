@@ -23,7 +23,7 @@ const SectionTitle = () => (
                     showcasing expertise in{' '}
                     <span className="text-primary">full-stack development</span>,{' '}
                     <span className="text-primary">UI/UX design</span>, and{' '}
-                    <span className="text-primary">cloud architecture</span>.
+                    <span className="text-primary">Frontend Development </span>.
                 </p>
             </div>
         </div>
