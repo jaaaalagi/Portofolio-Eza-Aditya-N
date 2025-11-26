@@ -197,7 +197,7 @@ const config = {
                 "Prototype"
             ],
             github: "#",
-            demo: "#"
+            demo: "https://www.figma.com/proto/SLwyN3KjjRYp9fuHQlihVj/App-Moneaze?page-id=0%3A1&node-id=2004-482&viewport=348%2C365%2C0.13&t=NlETS6rlKFGQgZkg-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2004%3A482"
         },
         {
             id: 2,
@@ -225,7 +225,7 @@ const config = {
                 "Branding"
             ],
             github: "#",
-            demo: "#"
+            demo: "https://www.figma.com/proto/7bWfcebe3GnWQTnw7JIPjP/ArchiDeck?page-id=0%3A1&node-id=7-15&viewport=571%2C249%2C0.16&t=u3JRdJ58JevmEyjR-1&scaling=min-zoom&content-scaling=fixed"
         },
         {
             id: 4,
@@ -240,7 +240,7 @@ const config = {
                 "Figma"
             ],
             github: "#",
-            demo: "#"
+            demo: "https://drive.google.com/file/d/1iAk-76AdgQXGRgY-2uvEGFWIiJVjZegr/view?usp=sharing"
         },
         {
             id: 5,
@@ -256,7 +256,7 @@ const config = {
                 "TypeScript"
             ],
             github: "#",
-            demo: "#"
+            demo: "https://drive.google.com/file/d/1vl745s7TyoZN5w5TD9UblBqeltfyLr6V/view?usp=sharing"
         }
     ],
     skills: [
