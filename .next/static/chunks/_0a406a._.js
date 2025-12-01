@@ -183,8 +183,20 @@ const config = {
     },
     NAV_ITEMS: [
         {
+            href: '/',
+            label: 'Home'
+        },
+        {
+            href: '/about',
+            label: 'About'
+        },
+        {
             href: '/projects',
             label: 'Projects'
+        },
+        {
+            href: '/certificates',
+            label: 'Certificates'
         },
         {
             href: '/contact',
@@ -272,7 +284,7 @@ const config = {
             title: "Frontend",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiCode"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 68,
+                lineNumber: 71,
                 columnNumber: 19
             }, this),
             description: "Modern web interfaces",
@@ -297,7 +309,7 @@ const config = {
             title: "Backend",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiDatabase"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 80,
+                lineNumber: 83,
                 columnNumber: 19
             }, this),
             description: "Server & Database",
@@ -324,7 +336,7 @@ const config = {
             title: "Programs & Tools",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiCube"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 92,
+                lineNumber: 95,
                 columnNumber: 19
             }, this),
             description: "Development & Productivity Tools",
@@ -401,7 +413,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 137,
+                lineNumber: 140,
                 columnNumber: 19
             }, this),
             label: "GitHub",
@@ -413,7 +425,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 143,
+                lineNumber: 146,
                 columnNumber: 11
             }, this),
             label: "Email",
@@ -425,7 +437,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 149,
+                lineNumber: 152,
                 columnNumber: 19
             }, this),
             label: "Location",

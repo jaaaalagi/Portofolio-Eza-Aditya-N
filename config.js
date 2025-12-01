@@ -10,7 +10,10 @@ export const config = {
         discord: "#"
     },
     NAV_ITEMS: [
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About' },
         { href: '/projects', label: 'Projects' },
+        { href: '/certificates', label: 'Certificates' },  // Tambahkan ini
         { href: '/contact', label: 'Contact' }
     ],
     recentTracks: true, // Enable/disable Spotify recent tracks
