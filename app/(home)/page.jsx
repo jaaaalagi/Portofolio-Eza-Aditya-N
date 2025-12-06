@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import HeroSection from './components/HeroSection'
-import GithubProjects from './components/GithubProjects'
+import GithubProjects from './components/Certificatee'
 import SkillsSection from './components/Skills'
 import ExperienceSection from './components/Experience'
 import Link from 'next/link'

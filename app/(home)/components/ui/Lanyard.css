@@ -1,0 +1,5 @@
+.lanyard-wrapper {
+  position: relative;
+  cursor: grab;
+  background: transparent; /* hapus gradasi */
+}

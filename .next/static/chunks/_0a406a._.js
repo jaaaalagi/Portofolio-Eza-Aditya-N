@@ -207,6 +207,24 @@ const config = {
     projects: [
         {
             id: 1,
+            title: "AGROTERA Company Profile Website",
+            description: "Development of a dynamic company profile website for Agrotera. This website is designed to introduce the company's services and identity to the public.",
+            image: "/projects/Agrotera.png",
+            technologies: [
+                "Figma",
+                "Frontend",
+                "Backend",
+                "Lartavel",
+                "Blade",
+                "MySQL",
+                "TailwindCSS",
+                "API"
+            ],
+            github: "#",
+            demo: "https://agroterasayurmayur.wuaze.com/"
+        },
+        {
+            id: 2,
             title: "Moneaze Financial Management App",
             description: "A financial management solution for personal and business budgeting. Delivered high-fidelity designs and interactive prototypes to simplify cash flow tracking.",
             image: "/projects/Moneaze 1.png",
@@ -220,7 +238,7 @@ const config = {
             demo: "https://www.figma.com/proto/SLwyN3KjjRYp9fuHQlihVj/App-Moneaze?page-id=0%3A1&node-id=2004-482&viewport=348%2C365%2C0.13&t=NlETS6rlKFGQgZkg-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2004%3A482"
         },
         {
-            id: 2,
+            id: 3,
             title: "CheckMyKicks Website",
             description: "A web platform for sneaker authenticity verification (legit check). Handled the end-to-end process from UI/UX prototyping in Figma to Front-End implementation using React.js.",
             image: "/projects/project-2.png",
@@ -234,7 +252,7 @@ const config = {
             demo: "https://www.checkmykicks.my.id/"
         },
         {
-            id: 3,
+            id: 4,
             title: "ArchiDeck: Elevating Architectural Design with Modern UI/UX Innovation",
             description: "Designed an intuitive UI/UX and interactive prototypes for ArchiDeck, an innovative platform connecting architects and clients. Focused on creating a seamless, user-friendly experience that highlights architectural designs and builds a strong brand identity.",
             image: "/projects/project-3.png",
@@ -248,7 +266,7 @@ const config = {
             demo: "https://www.figma.com/proto/7bWfcebe3GnWQTnw7JIPjP/ArchiDeck?page-id=0%3A1&node-id=7-15&viewport=571%2C249%2C0.16&t=u3JRdJ58JevmEyjR-1&scaling=min-zoom&content-scaling=fixed"
         },
         {
-            id: 4,
+            id: 5,
             title: "Crafting a Complete Brand Identity for ArchiDeck from Logo to Visual System",
             description: "Designed a full brand identity for ArchiDeck, including logo creation, custom typography, color palette, and branding elements, ensuring a professional, cohesive, and impactful visual identity that reflects the brand’s essence.",
             image: "/projects/project-4.png",
@@ -263,7 +281,7 @@ const config = {
             demo: "https://drive.google.com/file/d/1iAk-76AdgQXGRgY-2uvEGFWIiJVjZegr/view?usp=sharing"
         },
         {
-            id: 5,
+            id: 6,
             title: "Annual Calendar Design for Majelis Taklim Al-Khairat",
             description: "Created a personalized annual calendar for Majelis Taklim Al-Khairat, from theme selection to photo curation and layout design. Delivered a polished final product that effectively combined visuals and branding, resulting in client satisfaction.",
             image: "/projects/project-5.png",
@@ -284,7 +302,7 @@ const config = {
             title: "Frontend",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiCode"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 71,
+                lineNumber: 80,
                 columnNumber: 19
             }, this),
             description: "Modern web interfaces",
@@ -293,7 +311,7 @@ const config = {
             skills: [
                 {
                     name: "React",
-                    level: "Advanced"
+                    level: "Intermediate"
                 },
                 {
                     name: "TailwindCSS",
@@ -302,6 +320,18 @@ const config = {
                 {
                     name: "JavaScript",
                     level: "Advanced"
+                },
+                {
+                    name: "Blade",
+                    level: "Advanced"
+                },
+                {
+                    name: "Bootstrap",
+                    level: "Advanced"
+                },
+                {
+                    name: "Vite",
+                    level: "Intermediate"
                 }
             ]
         },
@@ -309,7 +339,7 @@ const config = {
             title: "Backend",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiDatabase"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 83,
+                lineNumber: 95,
                 columnNumber: 19
             }, this),
             description: "Server & Database",
@@ -318,16 +348,16 @@ const config = {
             skills: [
                 {
                     name: "Node.js",
-                    level: "Advanced",
+                    level: "Intermediate",
                     hot: true
                 },
                 {
-                    name: "MongoDB",
+                    name: "MySQL",
                     level: "Advanced"
                 },
                 {
-                    name: "Express.js",
-                    level: "Advanced",
+                    name: "Laravel",
+                    level: "Intermediate",
                     hot: true
                 }
             ]
@@ -336,7 +366,7 @@ const config = {
             title: "Programs & Tools",
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiCube"], {}, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 95,
+                lineNumber: 107,
                 columnNumber: 19
             }, this),
             description: "Development & Productivity Tools",
@@ -349,61 +379,48 @@ const config = {
                     hot: true
                 },
                 {
-                    name: "Postman",
-                    level: "Advanced"
+                    name: "Figma",
+                    level: "Expert"
                 },
                 {
-                    name: "Photoshop",
+                    name: "Framer",
+                    level: "Beginner"
+                },
+                {
+                    name: "Adobe Ilustrator",
                     level: "Intermediate"
                 },
                 {
                     name: "Git",
-                    level: "Advanced"
+                    level: "Intermediate"
+                },
+                {
+                    name: "Xampp",
+                    level: "Intermediate"
                 }
             ]
         }
     ],
     experiences: [
         {
-            position: "Frontend Developer",
-            company: "SelectSkillSet",
-            period: "2024 - Present",
-            location: "Remote",
-            description: "Developing modern, responsive frontend applications with focus on user experience and performance. Working with cutting-edge technologies to build scalable web solutions.",
-            responsibilities: [
-                "Building responsive and interactive user interfaces using React and Next.js",
-                "Implementing modern UI/UX designs with TailwindCSS and Framer Motion",
-                "Optimizing application performance and ensuring cross-browser compatibility",
-                "Collaborating with design and backend teams to deliver high-quality features"
-            ],
-            technologies: [
-                "React",
-                "Next.js",
-                "TailwindCSS",
-                "JavaScript",
-                "Framer Motion",
-                "TypeScript"
-            ]
-        },
-        {
             position: "Full Stack Developer",
             company: "AGROTERA",
             period: "2025 - 2026",
             location: "Remote",
-            description: "Developed and maintained full-stack website, working on both frontend and backend systems. Collaborated with cross-functional teams to deliver robust software solutions.",
+            description: "Development of a dynamic company profile website for Agrotera. This website is designed to introduce the company's services and identity to the public.",
             responsibilities: [
-                "Developed and maintained full-stack web applications using React, Node.js, and MongoDB",
+                "Developed and maintained full-stack web applications using Laravel, Blade.php, and MySQL",
                 "Implemented RESTful APIs and integrated third-party services",
                 "Built responsive user interfaces and optimized application performance",
-                "Worked on database design and backend architecture"
+                "Worked on Frontend, database design and backend architecture"
             ],
             technologies: [
-                "React",
-                "Node.js",
-                "MongoDB",
-                "Express",
-                "JavaScript",
-                "MERN Stack"
+                "Laravel",
+                "Blade.php",
+                "MySQL",
+                "Tailwind CSS",
+                "PHP",
+                "PHPMyAdmin"
             ]
         }
     ],
@@ -413,7 +430,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 140,
+                lineNumber: 141,
                 columnNumber: 19
             }, this),
             label: "GitHub",
@@ -425,7 +442,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 146,
+                lineNumber: 147,
                 columnNumber: 11
             }, this),
             label: "Email",
@@ -437,7 +454,7 @@ const config = {
                 className: "w-5 h-5"
             }, void 0, false, {
                 fileName: "[project]/config.js",
-                lineNumber: 152,
+                lineNumber: 153,
                 columnNumber: 19
             }, this),
             label: "Location",

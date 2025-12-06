@@ -1,0 +1,17 @@
+/* [project]/app/(home)/components/ui/Lanyard.css [app-client] (css) */
+.lanyard-wrapper {
+  position: relative;
+  cursor: grab;
+  background: linear-gradient(135deg, #0003, #0000001a);
+}
+
+.lanyard-wrapper:active {
+  cursor: grabbing;
+}
+
+.lanyard-wrapper > div {
+  will-change: transform;
+}
+
+
+/*# sourceMappingURL=app_%28home%29_components_ui_Lanyard_a6a74b.css.map*/

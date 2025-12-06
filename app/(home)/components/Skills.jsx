@@ -9,9 +9,9 @@ import { config } from '@/config';
 const getLevelPercentage = (level) => {
     switch (level) {
         case 'Expert': return 95;
-        case 'Advanced': return 85;
-        case 'Intermediate': return 70;
-        case 'Beginner': return 50;
+        case 'Advanced': return 75;
+        case 'Intermediate': return 60;
+        case 'Beginner': return 40;
         default: return 75;
     }
 };
