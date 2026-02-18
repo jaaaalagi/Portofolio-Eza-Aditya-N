@@ -4,25 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import BackgroundEffects from '@/components/ui/background-effects';
 import ContactForm from './components/ContactForm';
-import { toast } from 'sonner';
 import { config } from '@/config';
 
 const ContactPage = () => {
-    const handleSubmit = async (formData) => {
-        try {
-            console.log('Form submitted:', formData);
-
-            toast.success("Thank you for your message. I'll get back to you soon.");
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            toast.error("Something went wrong. Please try again later.");
-        }
-    };
-
     const contactInfo = config.contactInfo;
-
-
-
 
     return (
         <section className="relative flex items-center justify-center py-6" id="contact">
@@ -41,7 +26,7 @@ const ContactPage = () => {
                     className="text-center space-y-4 mb-12 sm:mb-16 w-full"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
-                        Welcome to the Contact Page 
+                        Welcome to the Contact Page
                     </h2>
                     <p className="text-muted-foreground max-w-xl mx-auto text-sm sm:text-base px-4">
                         Have a project in mind? Looking to collaborate? Drop me a message,
@@ -56,7 +41,7 @@ const ContactPage = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="w-full lg:w-2/3 backdrop-blur-sm bg-secondary/5 p-4 sm:p-6 rounded-2xl border border-secondary/10"
                     >
-                        <ContactForm onSubmit={handleSubmit} />
+                        <ContactForm />
                     </motion.div>
 
                     <motion.div

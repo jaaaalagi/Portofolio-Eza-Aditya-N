@@ -11,9 +11,11 @@
     "static/chunks/node_modules_three_build_three_module_90b415.js",
     "static/chunks/node_modules_react-reconciler_25c8ec._.js",
     "static/chunks/node_modules_@react-three_fiber_dist_faa3bf._.js",
-    "static/chunks/node_modules_4890ba._.js",
+    "static/chunks/node_modules_three-stdlib_2b4f33._.js",
+    "static/chunks/node_modules_69e5db._.js",
     "static/chunks/app_(home)_components_ui_LanyardCard_jsx_c25e35._.js",
-    "static/chunks/node_modules_@dimforge_rapier3d-compat_rapier_mjs_a4690a._.js"
+    "static/chunks/app_(home)_components_ui_Lanyard_a6a74b.css",
+    "static/chunks/node_modules_@dimforge_rapier3d-compat_rapier_mjs_b209e9._.js"
   ],
   "source": "dynamic"
 });

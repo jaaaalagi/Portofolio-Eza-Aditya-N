@@ -163,8 +163,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$background$2d$effects$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/background-effects.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$CountUp$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/CountUp.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-"use client";
+;
 ;
 ;
 ;
@@ -215,7 +216,7 @@ const AboutPage = ()=>{
                     className: "grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-center lg:justify-center px-6 max-w-[480px] w-full",
+                            className: "flex justify-center lg:justify-center w-full max-w-[480px] overflow-visible",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                 initial: {
                                     opacity: 0,
@@ -228,16 +229,27 @@ const AboutPage = ()=>{
                                 transition: {
                                     delay: 0.3
                                 },
-                                className: "w-full max-w-[400px]",
+                                className: "w-full h-[520px] lg:h-[600px] overflow-visible",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Suspense"], {
                                     fallback: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-full h-[480px] bg-slate-900 rounded-2xl animate-pulse"
+                                        className: "w-full h-full bg-slate-900/20 rounded-2xl animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.jsx",
                                         lineNumber: 35,
                                         columnNumber: 35
                                     }, void 0),
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LanyardCard, {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LanyardCard, {
+                                        position: [
+                                            0,
+                                            0,
+                                            18
+                                        ],
+                                        gravity: [
+                                            0,
+                                            -40,
+                                            0
+                                        ]
+                                    }, void 0, false, {
                                         fileName: "[project]/app/about/page.jsx",
                                         lineNumber: 36,
                                         columnNumber: 17
@@ -272,20 +284,21 @@ const AboutPage = ()=>{
                                     transition: {
                                         delay: 0.4
                                     },
+                                    className: "w-fit",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2",
+                                            className: "text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 whitespace-nowrap",
                                             children: "Eza Aditya Nugroho"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 49,
+                                            lineNumber: 50,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "h-1 w-20 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full"
+                                            className: "h-1 w-full bg-gradient-to-r from-[#00D2FF] to-[#00A3FF] rounded-full"
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -306,11 +319,11 @@ const AboutPage = ()=>{
                                     transition: {
                                         delay: 0.5
                                     },
-                                    className: "text-lg sm:text-xl text-yellow-400 font-semibold",
+                                    className: "text-lg sm:text-xl text-[#00D2FF] font-semibold",
                                     children: "Full-Stack Developer | UI/UX Enthusiast | Tech Learner"
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.jsx",
-                                    lineNumber: 56,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -332,7 +345,7 @@ const AboutPage = ()=>{
                                             children: "Hi! I'm Eza Aditya Nugroho, a passionate full-stack developer from Indonesia with a strong commitment to creating intuitive and impactful digital solutions. With 2+ years of experience in web development, I specialize in building responsive applications using modern technologies like React, Next.js, and Node.js."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 72,
+                                            lineNumber: 73,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -340,7 +353,7 @@ const AboutPage = ()=>{
                                             children: "My journey in tech started with a curiosity about how things work on the web. Since then, I've developed a deep interest in both frontend and backend development, always striving to bridge the gap between design and functionality. I believe in writing clean, maintainable code and delivering exceptional user experiences."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 76,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -348,13 +361,13 @@ const AboutPage = ()=>{
                                             children: "Beyond coding, I'm a lifelong learner who loves exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. When I'm not coding, you can find me learning new skills, reading tech blogs, or working on personal projects that challenge me to grow."
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 80,
+                                            lineNumber: 81,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.jsx",
-                                    lineNumber: 66,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -375,11 +388,20 @@ const AboutPage = ()=>{
                                             className: "text-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-2xl sm:text-3xl font-bold text-yellow-400",
-                                                    children: "15+"
-                                                }, void 0, false, {
+                                                    className: "text-2xl sm:text-3xl font-bold text-[#00D2FF]",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$CountUp$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                            to: 15
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/about/page.jsx",
+                                                            lineNumber: 95,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "+"
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 93,
+                                                    lineNumber: 94,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -387,24 +409,33 @@ const AboutPage = ()=>{
                                                     children: "Certificates"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 94,
+                                                    lineNumber: 97,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 92,
+                                            lineNumber: 93,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-2xl sm:text-3xl font-bold text-yellow-400",
-                                                    children: "15+"
-                                                }, void 0, false, {
+                                                    className: "text-2xl sm:text-3xl font-bold text-[#00D2FF]",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$CountUp$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                            to: 15
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/about/page.jsx",
+                                                            lineNumber: 101,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "+"
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 97,
+                                                    lineNumber: 100,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -412,24 +443,33 @@ const AboutPage = ()=>{
                                                     children: "Projects"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 103,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 96,
+                                            lineNumber: 99,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-2xl sm:text-3xl font-bold text-yellow-400",
-                                                    children: "2+"
-                                                }, void 0, false, {
+                                                    className: "text-2xl sm:text-3xl font-bold text-[#00D2FF]",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$CountUp$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                            to: 2
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/about/page.jsx",
+                                                            lineNumber: 107,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "+"
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 106,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -437,19 +477,19 @@ const AboutPage = ()=>{
                                                     children: "Years Exp"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/about/page.jsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 109,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/about/page.jsx",
-                                            lineNumber: 100,
+                                            lineNumber: 105,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/about/page.jsx",
-                                    lineNumber: 86,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, this)
                             ]

@@ -241,10 +241,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/button.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/input.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/textarea.jsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$emailjs$2f$browser$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/@emailjs/browser/es/index.js [app-client] (ecmascript) <module evaluation>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/sonner/dist/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-hook-form/dist/index.esm.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$emailjs$2f$browser$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/@emailjs/browser/es/index.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
@@ -254,18 +252,34 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-const ContactForm = ({ onSubmit })=>{
+const ContactForm = ()=>{
     _s();
     const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])();
-    const formRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])();
-    //   console.log(`env : ${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`)
     const onSubmitHandler = async (data)=>{
-        await onSubmit(data);
-        await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$emailjs$2f$browser$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].sendForm(("TURBOPACK compile-time value", "service_ti87dh9"), ("TURBOPACK compile-time value", "template_18ik2gr"), formRef.current, ("TURBOPACK compile-time value", "fN-_U-7Bu0HMYWeaw"));
-        reset();
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.message
+                })
+            });
+            const result = await response.json();
+            if (!response.ok) {
+                throw new Error(result.error || "Gagal mengirim pesan");
+            }
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Pesan berhasil terkirim! Saya akan segera membalas.");
+            reset();
+        } catch (error) {
+            console.error("Send Email Error:", error);
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error(error.message || "Gagal mengirim pesan. Silakan coba lagi.");
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-        ref: formRef,
         onSubmit: handleSubmit(onSubmitHandler),
         className: "space-y-6",
         children: [
@@ -284,7 +298,7 @@ const ContactForm = ({ onSubmit })=>{
                                         children: "Your Name"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 49,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -293,12 +307,11 @@ const ContactForm = ({ onSubmit })=>{
                                         }),
                                         id: "name",
                                         type: "text",
-                                        name: "name",
                                         placeholder: "Eza Aditya Nugroho",
                                         className: "rounded-lg border-primary/20 w-full"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 41,
+                                        lineNumber: 52,
                                         columnNumber: 13
                                     }, this),
                                     errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -306,13 +319,13 @@ const ContactForm = ({ onSubmit })=>{
                                         children: errors.name.message
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 50,
+                                        lineNumber: 60,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                lineNumber: 37,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -324,7 +337,7 @@ const ContactForm = ({ onSubmit })=>{
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 57,
+                                        lineNumber: 67,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -337,12 +350,11 @@ const ContactForm = ({ onSubmit })=>{
                                         }),
                                         id: "email",
                                         type: "email",
-                                        name: "email",
                                         placeholder: "ezaaditya@example.com",
                                         className: "rounded-lg border-primary/20 w-full"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 60,
+                                        lineNumber: 70,
                                         columnNumber: 13
                                     }, this),
                                     errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -350,19 +362,19 @@ const ContactForm = ({ onSubmit })=>{
                                         children: errors.email.message
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 84,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                lineNumber: 56,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                        lineNumber: 36,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -374,7 +386,7 @@ const ContactForm = ({ onSubmit })=>{
                                 children: "Message"
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                lineNumber: 84,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -382,12 +394,11 @@ const ContactForm = ({ onSubmit })=>{
                                     required: "Message is required"
                                 }),
                                 id: "message",
-                                name: "message",
                                 placeholder: "Write your message here...",
                                 className: "rounded-lg border-primary/20 min-h-[150px] w-full resize-y"
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                lineNumber: 87,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             errors.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -395,19 +406,19 @@ const ContactForm = ({ onSubmit })=>{
                                 children: errors.message.message
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                                lineNumber: 95,
+                                lineNumber: 103,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                        lineNumber: 83,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                lineNumber: 34,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -417,17 +428,17 @@ const ContactForm = ({ onSubmit })=>{
                 children: isSubmitting ? "Sending..." : "Send Message"
             }, void 0, false, {
                 fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-                lineNumber: 102,
+                lineNumber: 110,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(contact)/contact/components/ContactForm.jsx",
-        lineNumber: 33,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 };
-_s(ContactForm, "UDdB+xzq7Qf53fDxD738l1llCg8=", false, function() {
+_s(ContactForm, "R7LDjFGm3xCj+x8INEgIsG1ntx4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"]
     ];
@@ -452,7 +463,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$background$2d$effects$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/background-effects.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$contact$292f$contact$2f$components$2f$ContactForm$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/(contact)/contact/components/ContactForm.jsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/sonner/dist/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$config$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/config.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 "use client";
@@ -462,17 +472,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 ;
-;
 const ContactPage = ()=>{
-    const handleSubmit = async (formData)=>{
-        try {
-            console.log('Form submitted:', formData);
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Thank you for your message. I'll get back to you soon.");
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("Something went wrong. Please try again later.");
-        }
-    };
     const contactInfo = __TURBOPACK__imported__module__$5b$project$5d2f$config$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["config"].contactInfo;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "relative flex items-center justify-center py-6",
@@ -488,7 +488,7 @@ const ContactPage = ()=>{
                 blurAmount: "3xl"
             }, void 0, false, {
                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                lineNumber: 29,
+                lineNumber: 14,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,7 +513,7 @@ const ContactPage = ()=>{
                                 children: "Welcome to the Contact Page"
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                lineNumber: 43,
+                                lineNumber: 28,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -521,13 +521,13 @@ const ContactPage = ()=>{
                                 children: "Have a project in mind? Looking to collaborate? Drop me a message, and let's create something amazing together."
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                lineNumber: 46,
+                                lineNumber: 31,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                        lineNumber: 37,
+                        lineNumber: 22,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -547,16 +547,14 @@ const ContactPage = ()=>{
                                     delay: 0.2
                                 },
                                 className: "w-full lg:w-2/3 backdrop-blur-sm bg-secondary/5 p-4 sm:p-6 rounded-2xl border border-secondary/10",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$contact$292f$contact$2f$components$2f$ContactForm$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    onSubmit: handleSubmit
-                                }, void 0, false, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$contact$292f$contact$2f$components$2f$ContactForm$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/app/(contact)/contact/page.jsx",
-                                    lineNumber: 59,
+                                    lineNumber: 44,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                lineNumber: 53,
+                                lineNumber: 38,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -579,7 +577,7 @@ const ContactPage = ()=>{
                                         children: "Contact Information"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                                        lineNumber: 68,
+                                        lineNumber: 53,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +590,7 @@ const ContactPage = ()=>{
                                                         children: info.icon
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                        lineNumber: 72,
+                                                        lineNumber: 57,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -603,7 +601,7 @@ const ContactPage = ()=>{
                                                                 children: info.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                                lineNumber: 76,
+                                                                lineNumber: 61,
                                                                 columnNumber: 41
                                                             }, this),
                                                             info.link ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -614,55 +612,55 @@ const ContactPage = ()=>{
                                                                 children: info.value
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                                lineNumber: 80,
+                                                                lineNumber: 65,
                                                                 columnNumber: 45
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 className: "text-sm sm:text-base text-primary break-words",
                                                                 children: info.value
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                                lineNumber: 89,
+                                                                lineNumber: 74,
                                                                 columnNumber: 45
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                        lineNumber: 75,
+                                                        lineNumber: 60,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                                lineNumber: 71,
+                                                lineNumber: 56,
                                                 columnNumber: 33
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                                        lineNumber: 69,
+                                        lineNumber: 54,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                                lineNumber: 62,
+                                lineNumber: 47,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(contact)/contact/page.jsx",
-                        lineNumber: 52,
+                        lineNumber: 37,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(contact)/contact/page.jsx",
-                lineNumber: 36,
+                lineNumber: 21,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(contact)/contact/page.jsx",
-        lineNumber: 28,
+        lineNumber: 13,
         columnNumber: 9
     }, this);
 };

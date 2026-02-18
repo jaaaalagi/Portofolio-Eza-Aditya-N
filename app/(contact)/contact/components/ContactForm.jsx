@@ -1,12 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = () => {
   const {
     register,
     handleSubmit,
@@ -14,23 +14,34 @@ const ContactForm = ({ onSubmit }) => {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const formRef = useRef();
-//   console.log(`env : ${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`)
-
   const onSubmitHandler = async (data) => {
-    await onSubmit(data);
-    await emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-    );
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      });
 
-    reset();
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Gagal mengirim pesan");
+      }
+
+      toast.success("Pesan berhasil terkirim! Saya akan segera membalas.");
+      reset();
+    } catch (error) {
+      console.error("Send Email Error:", error);
+      toast.error(error.message || "Gagal mengirim pesan. Silakan coba lagi.");
+    }
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit(onSubmitHandler)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmitHandler)} className="space-y-6">
       <div className="space-y-4">
         {/* Name and Email in a 2-column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -42,7 +53,6 @@ const ContactForm = ({ onSubmit }) => {
               {...register("name", { required: "Name is required" })}
               id="name"
               type="text"
-              name="name"
               placeholder="Eza Aditya Nugroho"
               className="rounded-lg border-primary/20 w-full"
             />
@@ -67,7 +77,6 @@ const ContactForm = ({ onSubmit }) => {
               })}
               id="email"
               type="email"
-              name="email"
               placeholder="ezaaditya@example.com"
               className="rounded-lg border-primary/20 w-full"
             />
@@ -87,7 +96,6 @@ const ContactForm = ({ onSubmit }) => {
           <Textarea
             {...register("message", { required: "Message is required" })}
             id="message"
-            name="message"
             placeholder="Write your message here..."
             className="rounded-lg border-primary/20 min-h-[150px] w-full resize-y"
           />

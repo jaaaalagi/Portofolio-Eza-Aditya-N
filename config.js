@@ -72,7 +72,7 @@ export const config = {
             github: "#",
             demo: "https://drive.google.com/file/d/1vl745s7TyoZN5w5TD9UblBqeltfyLr6V/view?usp=sharing"
         }
- 
+
     ],
     skills: [
         {
@@ -133,10 +133,24 @@ export const config = {
                 "Worked on Frontend, database design and backend architecture"
             ],
             technologies: ["Laravel", "Blade.php", "MySQL", "Tailwind CSS", "PHP", "PHPMyAdmin"]
+        },
+        {
+            position: "Web Development Intern",
+            company: "Kementerian Pekerjaan Umum (Pusdatin)",
+            period: "Januari 2026 – Juni 2026",
+            location: "Kementerian PU (Pusdatin) Jakarta Selatan, Indonesia",
+            description: "Development of an internal Admin Notification Dashboard for Pusdatin. This system is designed to automate and manage email reminders for all employees within the organization.",
+            responsibilities: [
+                "Designed the brand identity, user interface (UI), and user experience (UX) from scratch to ensure a professional and intuitive dashboard.",
+                "Created high-fidelity prototypes to streamline the development process and align team vision.",
+                "Developed and refined the frontend components using HTML and Tailwind CSS integrated with Laravel.",
+                "Collaborated with the backend team to ensure seamless functionality of the automated Gmail notification system."
+            ],
+            technologies: ["Laravel", "Figma", "Prototyping", "Tailwind CSS", "HTML", "UI/UX Design"]
         }
     ],
     contactInfo: [
-     
+
         {
             icon: <FaGithub className="w-5 h-5" />,
             label: "GitHub",
@@ -144,10 +158,10 @@ export const config = {
             link: `https://github.com/jaaaalagi`
         },
         {
-    icon: <HiMail className="w-5 h-5" />,
-    label: "Email",
-    value: "ezaadityanugroho1@gmail.com",
-    link: "mailto:ezaadityanugroho1@gmail.com"
+            icon: <HiMail className="w-5 h-5" />,
+            label: "Email",
+            value: "ezaadityanugroho1@gmail.com",
+            link: "mailto:ezaadityanugroho1@gmail.com"
         },
         {
             icon: <FaMapPin className="w-5 h-5" />,

@@ -495,10 +495,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$config$2e$js__$5b$app$2d$ssr
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$JaLogo$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/components/ui/JaLogo.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-icons/hi/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -544,18 +546,18 @@ const NavLink = ({ href, label, isMobile = false })=>{
                     }
                 }, void 0, false, {
                     fileName: "[project]/components/Header/index.jsx",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 21
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/index.jsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Header/index.jsx",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
     }, this);
 };
@@ -577,25 +579,21 @@ const Logo = ({ isMobile = false })=>/*#__PURE__*/ (0, __TURBOPACK__imported__mo
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                     whileHover: {
-                        opacity: 0.5
+                        opacity: 0.8
                     },
                     whileTap: {
                         scale: 0.95
                     },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        src: "/logo.png",
-                        width: 2000,
-                        height: 2000,
-                        alt: "logo",
-                        className: `${isMobile ? 'w-10 h-10' : 'w-12 h-12 sm:w-14 sm:h-14'} rounded-lg`
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$JaLogo$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        className: `${isMobile ? 'w-10 h-10' : 'w-12 h-12 sm:w-14 sm:h-14'}`
                     }, void 0, false, {
                         fileName: "[project]/components/Header/index.jsx",
-                        lineNumber: 63,
+                        lineNumber: 64,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Header/index.jsx",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
@@ -614,23 +612,23 @@ const Logo = ({ isMobile = false })=>/*#__PURE__*/ (0, __TURBOPACK__imported__mo
                         children: __TURBOPACK__imported__module__$5b$project$5d2f$config$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["config"].developer.name
                     }, void 0, false, {
                         fileName: "[project]/components/Header/index.jsx",
-                        lineNumber: 77,
+                        lineNumber: 72,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Header/index.jsx",
-                    lineNumber: 71,
+                    lineNumber: 66,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/index.jsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Header/index.jsx",
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 const Navigation = ({ isMobile = false, onLinkClick })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].nav, {
@@ -671,17 +669,17 @@ const Navigation = ({ isMobile = false, onLinkClick })=>/*#__PURE__*/ (0, __TURB
                     isMobile: isMobile
                 }, void 0, false, {
                     fileName: "[project]/components/Header/index.jsx",
-                    lineNumber: 99,
+                    lineNumber: 94,
                     columnNumber: 17
                 }, this)
             }, item.href, false, {
                 fileName: "[project]/components/Header/index.jsx",
-                lineNumber: 92,
+                lineNumber: 87,
                 columnNumber: 13
             }, this))
     }, void 0, false, {
         fileName: "[project]/components/Header/index.jsx",
-        lineNumber: 85,
+        lineNumber: 80,
         columnNumber: 5
     }, this);
 const ContactButton = ({ isMobile = false, onLinkClick })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -711,7 +709,7 @@ const ContactButton = ({ isMobile = false, onLinkClick })=>/*#__PURE__*/ (0, __T
                         children: "View CV "
                     }, void 0, false, {
                         fileName: "[project]/components/Header/index.jsx",
-                        lineNumber: 115,
+                        lineNumber: 110,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -719,23 +717,23 @@ const ContactButton = ({ isMobile = false, onLinkClick })=>/*#__PURE__*/ (0, __T
                         children: "Template"
                     }, void 0, false, {
                         fileName: "[project]/components/Header/index.jsx",
-                        lineNumber: 116,
+                        lineNumber: 111,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Header/index.jsx",
-                lineNumber: 114,
+                lineNumber: 109,
                 columnNumber: 13
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/Header/index.jsx",
-            lineNumber: 113,
+            lineNumber: 108,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Header/index.jsx",
-        lineNumber: 106,
+        lineNumber: 101,
         columnNumber: 5
     }, this);
 const Header = ()=>{
@@ -766,24 +764,24 @@ const Header = ()=>{
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {}, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 142,
+                            lineNumber: 137,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Navigation, {}, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 143,
+                            lineNumber: 138,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "hidden md:block",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContactButton, {}, void 0, false, {
                                 fileName: "[project]/components/Header/index.jsx",
-                                lineNumber: 145,
+                                lineNumber: 140,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 144,
+                            lineNumber: 139,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -794,29 +792,29 @@ const Header = ()=>{
                                 className: "w-6 h-6"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header/index.jsx",
-                                lineNumber: 155,
+                                lineNumber: 150,
                                 columnNumber: 29
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HiMenu"], {
                                 className: "w-6 h-6"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header/index.jsx",
-                                lineNumber: 157,
+                                lineNumber: 152,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 149,
+                            lineNumber: 144,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Header/index.jsx",
-                    lineNumber: 141,
+                    lineNumber: 136,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Header/index.jsx",
-                lineNumber: 135,
+                lineNumber: 130,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -839,7 +837,7 @@ const Header = ()=>{
                             onClick: closeMobileMenu
                         }, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 168,
+                            lineNumber: 163,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -867,12 +865,12 @@ const Header = ()=>{
                                             isMobile: true
                                         }, void 0, false, {
                                             fileName: "[project]/components/Header/index.jsx",
-                                            lineNumber: 188,
+                                            lineNumber: 183,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Header/index.jsx",
-                                        lineNumber: 187,
+                                        lineNumber: 182,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -882,12 +880,12 @@ const Header = ()=>{
                                             onLinkClick: closeMobileMenu
                                         }, void 0, false, {
                                             fileName: "[project]/components/Header/index.jsx",
-                                            lineNumber: 193,
+                                            lineNumber: 188,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Header/index.jsx",
-                                        lineNumber: 192,
+                                        lineNumber: 187,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContactButton, {
@@ -895,25 +893,25 @@ const Header = ()=>{
                                         onLinkClick: closeMobileMenu
                                     }, void 0, false, {
                                         fileName: "[project]/components/Header/index.jsx",
-                                        lineNumber: 197,
+                                        lineNumber: 192,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Header/index.jsx",
-                                lineNumber: 185,
+                                lineNumber: 180,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Header/index.jsx",
-                            lineNumber: 178,
+                            lineNumber: 173,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/components/Header/index.jsx",
-                lineNumber: 164,
+                lineNumber: 159,
                 columnNumber: 13
             }, this)
         ]

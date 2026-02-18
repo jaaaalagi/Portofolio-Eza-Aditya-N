@@ -1,0 +1,76 @@
+/* [project]/components/ui/PixelSnow.css [app-client] (css) */
+.pixel-snow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  contain: layout style paint;
+}
+
+.pixel-snow-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+
+/* [project]/components/ui/StarBorder.module.css [app-client] (css) */
+.StarBorder-module__jLfciq__starBorderContainer {
+  z-index: 0;
+}
+
+.StarBorder-module__jLfciq__borderGradientBottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: .7;
+  bottom: -12px;
+  right: -250%;
+  border-radius: 50%;
+  animation: linear infinite StarBorder-module__jLfciq__starMovementBottom;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.StarBorder-module__jLfciq__borderGradientTop {
+  position: absolute;
+  opacity: .7;
+  width: 300%;
+  height: 50%;
+  top: -12px;
+  left: -250%;
+  border-radius: 50%;
+  animation: linear infinite StarBorder-module__jLfciq__starMovementTop;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes StarBorder-module__jLfciq__starMovementBottom {
+  0% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes StarBorder-module__jLfciq__starMovementTop {
+  0% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100%);
+    opacity: 0;
+  }
+}
+
+
+/*# sourceMappingURL=components_ui_901c8e._.css.map*/

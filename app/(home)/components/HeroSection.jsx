@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { HiCode, HiArrowRight } from 'react-icons/hi';
 import { config } from '@/config';
@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { BackgroundPresets } from '@/components/ui/background-effects';
 import { motion } from 'framer-motion';
 import SkillsShowcase from './SkillsShowcase';
+import VariableProximity from '@/components/ui/VariableProximity';
+import PixelSnow from '@/components/ui/PixelSnow';
 
 const containerAnimation = {
   hidden: { opacity: 0 },
@@ -45,17 +47,31 @@ const textAnimation = {
 };
 
 const HeroSection = () => {
+  const containerRef = useRef(null);
   return (
-    <section className="min-h-[calc(100vh-140px)] flex items-center justify-center relative">
+    <section className="min-h-[calc(100vh-140px)] flex items-center justify-center relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <PixelSnow
+          color="#ffffff"
+          flakeSize={0.008} // Smaller flakes for "thin snow" look
+          pixelResolution={450} // Higher resolution for sharper, less blurry pixels
+          speed={1.5}
+          density={0.2}
+          direction={135}
+          className="w-full h-full"
+        />
+      </div>
       <BackgroundPresets.Minimal />
 
       <div className="container mx-auto px-6">
         <motion.div
+          ref={containerRef}
           variants={containerAnimation}
           initial="hidden"
           animate="show"
-          className="max-w-3xl mx-auto text-center space-y-8 relative"
+          className="max-w-3xl mx-auto text-center space-y-8 relative mt-16 sm:mt-24"
         >
+
           <motion.div
             variants={itemAnimation}
             className="inline-flex items-center space-x-2 bg-secondary/10 border-[1.8px] border-zinc-900/70 px-4 py-2 rounded-full text-primary backdrop-blur-sm"
@@ -73,13 +89,30 @@ const HeroSection = () => {
                 variants={textAnimation}
                 className="block text-primary mb-2"
               >
-                Hi, I'm {config.developer.name}
+                <VariableProximity
+                  label={`Hi, I'm ${config.developer.name}`}
+                  className="cursor-pointer tracking-tight"
+                  fromFontVariationSettings="'wght' 700, 'opsz' 9"
+                  toFontVariationSettings="'wght' 900, 'opsz' 40"
+                  containerRef={containerRef}
+                  radius={100}
+                  falloff="linear"
+                />
               </motion.span>
               <motion.span
                 variants={textAnimation}
                 className="block text-white/60 text-2xl md:text-4xl"
               >
-I Am Proficient in UI/UX, Design, and Frontend Development.              </motion.span>
+                <VariableProximity
+                  label="I Am Proficient in UI/UX, Design, and Frontend Development."
+                  className="cursor-pointer tracking-tight"
+                  fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                  toFontVariationSettings="'wght' 700, 'opsz' 40"
+                  containerRef={containerRef}
+                  radius={100}
+                  falloff="linear"
+                />
+              </motion.span>
             </motion.h1>
           </div>
 
@@ -87,7 +120,7 @@ I Am Proficient in UI/UX, Design, and Frontend Development.              </motio
             variants={itemAnimation}
             className="text-base sm:text-md text-muted-foreground leading-relaxed max-w-2xl mx-auto"
           >
-           I specialize in UI/UX Design, Frontend Development, and Graphic Design. Driven by collaboration and social activity, my goal is to deliver impactful digital solutions through professional projects and continuous growth.
+            I specialize in UI/UX Design, Frontend Development, and Graphic Design. Driven by collaboration and social activity, my goal is to deliver impactful digital solutions through professional projects and continuous growth.
           </motion.p>
 
           <motion.div
@@ -106,7 +139,7 @@ I Am Proficient in UI/UX, Design, and Frontend Development.              </motio
             </Link>
           </motion.div>
 
-     
+
 
           <motion.div
             initial={{ opacity: 0 }}

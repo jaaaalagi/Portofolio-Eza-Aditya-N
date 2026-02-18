@@ -1,4 +1,5 @@
 import React from 'react';
+import CountUp from '@/components/ui/CountUp';
 import { Button } from '@/components/ui/button';
 import { HiArrowRight, HiCode } from 'react-icons/hi';
 import { motion } from 'framer-motion';
@@ -30,14 +31,18 @@ const SectionTitle = () => (
 
         <div className="flex items-center gap-6 pt-2 overflow-x-auto pb-2 scrollbar-hide">
             <div className="space-y-1 flex-shrink-0">
-                <span className="text-xl sm:text-2xl font-bold text-primary">15+</span>
+                <span className="text-xl sm:text-2xl font-bold text-primary">
+                    <CountUp to={15} />+
+                </span>
                 <p className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">
                     Projects Completed
                 </p>
             </div>
             <div className="w-px h-8 sm:h-10 bg-primary/10 flex-shrink-0" />
             <div className="space-y-1 flex-shrink-0">
-                <span className="text-xl sm:text-2xl font-bold text-primary">2+</span>
+                <span className="text-xl sm:text-2xl font-bold text-primary">
+                    <CountUp to={2} />+
+                </span>
                 <p className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">
                     Years Experience
                 </p>

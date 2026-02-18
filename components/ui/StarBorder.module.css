@@ -1,0 +1,56 @@
+.starBorderContainer {
+    /* Removed layout affecting properties like relative/inline-block/padding */
+    z-index: 0;
+}
+
+.borderGradientBottom {
+    position: absolute;
+    width: 300%;
+    height: 50%;
+    opacity: 0.7;
+    bottom: -12px;
+    /* Reverted to roughly original visible position */
+    right: -250%;
+    border-radius: 50%;
+    animation: starMovementBottom linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.borderGradientTop {
+    position: absolute;
+    opacity: 0.7;
+    width: 300%;
+    height: 50%;
+    top: -12px;
+    /* Reverted to roughly original visible position */
+    left: -250%;
+    border-radius: 50%;
+    animation: starMovementTop linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes starMovementBottom {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+    }
+}
+
+@keyframes starMovementTop {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(100%, 0%);
+        opacity: 0;
+    }
+}

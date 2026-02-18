@@ -3,12 +3,13 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundEffects from '@/components/ui/background-effects';
 import dynamic from 'next/dynamic';
+import CountUp from '@/components/ui/CountUp';
 
-const LanyardCard = dynamic(() => import('../(home)/components/ui/LanyardCard'), { ssr: false });
+const LanyardCard = dynamic(() => import('@/components/ui/LanyardCard'), { ssr: false });
 
 const AboutPage = () => {
   return (
-    <section className="py-16 sm:py-20 relative min-h-screen" id="about">
+    <section className="pt-6 sm:pt-10 pb-16 sm:pb-20 relative min-h-screen" id="about">
       <BackgroundEffects
         variant="diagonal"
         colors={{ first: "secondary", second: "secondary" }}
@@ -24,16 +25,16 @@ const AboutPage = () => {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto"
         >
-          {/* Left Side - Photo with Lanyard (Frame lebih lebar dan tengah) */}
-          <div className="flex justify-center lg:justify-center px-6 max-w-[480px] w-full">
+          {/* Left Side - Photo with Lanyard */}
+          <div className="flex justify-center lg:justify-center w-full max-w-[480px] overflow-visible">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="w-full max-w-[400px]"
+              className="w-full h-[520px] lg:h-[600px] overflow-visible"
             >
-              <Suspense fallback={<div className="w-full h-[480px] bg-slate-900 rounded-2xl animate-pulse" />}>
-                <LanyardCard />
+              <Suspense fallback={<div className="w-full h-full bg-slate-900/20 rounded-2xl animate-pulse" />}>
+                <LanyardCard position={[0, 0, 18]} gravity={[0, -40, 0]} />
               </Suspense>
             </motion.div>
           </div>
@@ -45,11 +46,12 @@ const AboutPage = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
+              className="w-fit"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 whitespace-nowrap">
                 Eza Aditya Nugroho
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#00D2FF] to-[#00A3FF] rounded-full" />
             </motion.div>
 
             {/* Title/Role */}
@@ -57,7 +59,7 @@ const AboutPage = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg sm:text-xl text-yellow-400 font-semibold"
+              className="text-lg sm:text-xl text-[#00D2FF] font-semibold"
             >
               Full-Stack Developer | UI/UX Enthusiast | Tech Learner
             </motion.p>
@@ -90,15 +92,21 @@ const AboutPage = () => {
               className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10"
             >
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-yellow-400">15+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#00D2FF]">
+                  <CountUp to={15} />+
+                </div>
                 <p className="text-xs sm:text-sm text-white/60 mt-2">Certificates</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-yellow-400">15+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#00D2FF]">
+                  <CountUp to={15} />+
+                </div>
                 <p className="text-xs sm:text-sm text-white/60 mt-2">Projects</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-yellow-400">2+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#00D2FF]">
+                  <CountUp to={2} />+
+                </div>
                 <p className="text-xs sm:text-sm text-white/60 mt-2">Years Exp</p>
               </div>
             </motion.div>

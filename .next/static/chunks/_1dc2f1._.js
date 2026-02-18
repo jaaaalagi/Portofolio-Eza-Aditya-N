@@ -362,38 +362,6 @@ const CertificatesPage = ()=>{
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "space-y-3 sm:space-y-4 text-center",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    initial: {
-                                        opacity: 0,
-                                        y: 20
-                                    },
-                                    animate: {
-                                        opacity: 1,
-                                        y: 0
-                                    },
-                                    className: "inline-flex items-center space-x-2 bg-secondary/10 border-[1.8px] border-zinc-900/70 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white backdrop-blur-sm shadow-lg",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaAward"], {
-                                            className: "w-4 h-4 sm:w-5 sm:h-5"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/certificates/page.jsx",
-                                            lineNumber: 178,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-xs sm:text-sm font-semibold",
-                                            children: "My Achievements"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/certificates/page.jsx",
-                                            lineNumber: 179,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/certificates/page.jsx",
-                                    lineNumber: 173,
-                                    columnNumber: 25
-                                }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
                                     initial: {
                                         opacity: 0,
@@ -410,7 +378,7 @@ const CertificatesPage = ()=>{
                                     children: "Certificates & Achievements"
                                 }, void 0, false, {
                                     fileName: "[project]/app/certificates/page.jsx",
-                                    lineNumber: 182,
+                                    lineNumber: 175,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -429,7 +397,7 @@ const CertificatesPage = ()=>{
                                     children: "Professional certifications and achievements I've earned through dedicated learning and skill development"
                                 }, void 0, false, {
                                     fileName: "[project]/app/certificates/page.jsx",
-                                    lineNumber: 190,
+                                    lineNumber: 183,
                                     columnNumber: 25
                                 }, this)
                             ]
@@ -451,7 +419,7 @@ const CertificatesPage = ()=>{
                                             className: "absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"
                                         }, void 0, false, {
                                             fileName: "[project]/app/certificates/page.jsx",
-                                            lineNumber: 214,
+                                            lineNumber: 207,
                                             columnNumber: 33
                                         }, this),
                                         cert.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -464,12 +432,12 @@ const CertificatesPage = ()=>{
                                                 sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/certificates/page.jsx",
-                                                lineNumber: 219,
+                                                lineNumber: 212,
                                                 columnNumber: 41
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/certificates/page.jsx",
-                                            lineNumber: 218,
+                                            lineNumber: 211,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -481,12 +449,12 @@ const CertificatesPage = ()=>{
                                                         className: "w-5 h-5 sm:w-6 sm:h-6 text-yellow-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/certificates/page.jsx",
-                                                        lineNumber: 233,
+                                                        lineNumber: 226,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                    lineNumber: 232,
+                                                    lineNumber: 225,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -494,7 +462,7 @@ const CertificatesPage = ()=>{
                                                     children: cert.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 230,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -507,7 +475,7 @@ const CertificatesPage = ()=>{
                                                                     className: "w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                                    lineNumber: 244,
+                                                                    lineNumber: 237,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -515,13 +483,13 @@ const CertificatesPage = ()=>{
                                                                     children: cert.issuer
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                                    lineNumber: 245,
+                                                                    lineNumber: 238,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/certificates/page.jsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 236,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -531,26 +499,26 @@ const CertificatesPage = ()=>{
                                                                     className: "w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                                    lineNumber: 248,
+                                                                    lineNumber: 241,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: cert.date
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                                    lineNumber: 249,
+                                                                    lineNumber: 242,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/certificates/page.jsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 240,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                    lineNumber: 242,
+                                                    lineNumber: 235,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -558,7 +526,7 @@ const CertificatesPage = ()=>{
                                                     children: cert.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 247,
                                                     columnNumber: 37
                                                 }, this),
                                                 cert.credentialUrl && cert.credentialUrl !== "#" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -572,30 +540,30 @@ const CertificatesPage = ()=>{
                                                             className: "w-2.5 h-2.5 sm:w-3 sm:h-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/certificates/page.jsx",
-                                                            lineNumber: 267,
+                                                            lineNumber: 260,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/certificates/page.jsx",
-                                                    lineNumber: 260,
+                                                    lineNumber: 253,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/certificates/page.jsx",
-                                            lineNumber: 230,
+                                            lineNumber: 223,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, cert.id, true, {
                                     fileName: "[project]/app/certificates/page.jsx",
-                                    lineNumber: 208,
+                                    lineNumber: 201,
                                     columnNumber: 29
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/certificates/page.jsx",
-                            lineNumber: 201,
+                            lineNumber: 194,
                             columnNumber: 21
                         }, this)
                     ]

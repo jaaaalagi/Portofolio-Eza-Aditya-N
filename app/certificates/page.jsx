@@ -170,14 +170,7 @@ const CertificatesPage = () => {
                 <div className="space-y-8 sm:space-y-12">
                     {/* Header Section */}
                     <div className="space-y-3 sm:space-y-4 text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center space-x-2 bg-secondary/10 border-[1.8px] border-zinc-900/70 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white backdrop-blur-sm shadow-lg"
-                        >
-                            <FaAward className="w-4 h-4 sm:w-5 sm:h-5" />
-                            <span className="text-xs sm:text-sm font-semibold">My Achievements</span>
-                        </motion.div>
+
 
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}

@@ -1,11 +1,12 @@
 import localFont from "next/font/local";
+import { Jacquard_12 } from "next/font/google"; // Import Jacquard 12
 import "./globals.css";
 import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/Providers/Theme";
-import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/layout/Providers/Theme";
+import Header from "@/components/layout/Header";
 import { Toaster } from "sonner";
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 
 const geistSans = localFont({
@@ -14,10 +15,17 @@ const geistSans = localFont({
   weight: "100 900",
 });
 
+const jacquard12 = Jacquard_12({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-jacquard-12",
+  display: "swap",
+});
+
 export const metadata = {
   title: "Eza Aditya Nugroho\ Portfolio",
-  icons:{
-icon: "/logo.png"
+  icons: {
+    icon: "/logo.png"
   },
   description: "Experienced fullstack developer specializing in modern web technologies. View my projects, skills, and experience.",
   keywords: "fullstack developer,backend developer, frontend developer, web development, JavaScript,JS, C#, CSharp, React, Node.js, portfolio",
@@ -29,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.className} antialiased`}
+        className={`${geistSans.className} ${jacquard12.variable} antialiased`}
       >
 
         <ThemeProvider
