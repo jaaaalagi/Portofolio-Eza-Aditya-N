@@ -72,15 +72,15 @@ const AboutPage = () => {
               className="space-y-4"
             >
               <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-                Hi! I'm Eza Aditya Nugroho, a passionate full-stack developer from Indonesia with a strong commitment to creating intuitive and impactful digital solutions. With 2+ years of experience in web development, I specialize in building responsive applications using modern technologies like React, Next.js, and Node.js.
+                Hi! I&apos;m Eza Aditya Nugroho, a passionate full-stack developer from Indonesia with a strong commitment to creating intuitive and impactful digital solutions. With 2+ years of experience in web development, I specialize in building responsive applications using modern technologies like React, Next.js, and Node.js.
               </p>
 
               <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-                My journey in tech started with a curiosity about how things work on the web. Since then, I've developed a deep interest in both frontend and backend development, always striving to bridge the gap between design and functionality. I believe in writing clean, maintainable code and delivering exceptional user experiences.
+                My journey in tech started with a curiosity about how things work on the web. Since then, I&apos;ve developed a deep interest in both frontend and backend development, always striving to bridge the gap between design and functionality. I believe in writing clean, maintainable code and delivering exceptional user experiences.
               </p>
 
               <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-                Beyond coding, I'm a lifelong learner who loves exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. When I'm not coding, you can find me learning new skills, reading tech blogs, or working on personal projects that challenge me to grow.
+                Beyond coding, I&apos;m a lifelong learner who loves exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. When I&apos;m not coding, you can find me learning new skills, reading tech blogs, or working on personal projects that challenge me to grow.
               </p>
             </motion.div>
 

@@ -20,6 +20,7 @@ const jacquard12 = Jacquard_12({
   subsets: ["latin"],
   variable: "--font-jacquard-12",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata = {
