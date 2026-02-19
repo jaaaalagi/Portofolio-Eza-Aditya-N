@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import Link from 'next/link'; // Not needed here but keeping imports clean
+import Image from 'next/image';
 
 const ActivityCard = ({
     icon: Icon,
@@ -49,9 +50,11 @@ const ActivityCard = ({
             <div className="flex items-center gap-5 justify-center">
                 {image && (
                     <div className="flex-shrink-0">
-                        <img
+                        <Image
                             src={image}
                             alt={imageAlt}
+                            width={80}
+                            height={80}
                             className="w-20 h-20 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
                         />
                     </div>
@@ -72,7 +75,7 @@ const ActivityCard = ({
                     {isSpotify && startTime && endTime && (
                         <div className="mt-2 space-y-1">
                             <div className="w-full h-1 bg-secondary/20 rounded-full overflow-hidden">
-                                <div 
+                                <div
                                     className="h-full bg-green-500 rounded-full transition-all duration-1000 ease-linear"
                                     style={{ width: `${Math.min(progressPercentage, 100)}%` }}
                                 />

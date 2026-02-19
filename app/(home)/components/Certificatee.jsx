@@ -71,7 +71,7 @@ const CertificatesPreview = () => {
                     transition={{ delay: 0.2 }}
                     className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto"
                 >
-                    Professional certifications and achievements I've earned through dedicated learning and skill development
+                    Professional certifications and achievements I&apos;ve earned through dedicated learning and skill development
                 </motion.p>
             </div>
 

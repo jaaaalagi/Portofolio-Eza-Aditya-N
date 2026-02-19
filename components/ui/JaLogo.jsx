@@ -1,20 +1,32 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import MetallicPaint from '@/components/ui/MetallicPaint';
 
 const JaLogo = ({ className = "" }) => {
     const [logoSrc, setLogoSrc] = useState(null);
-    const fontRef = React.useRef(null);
+    const fontRef = useRef(null);
 
     useEffect(() => {
         const generateLogo = async () => {
-            await document.fonts.ready;
+            let loadedFontFamily = 'serif';
 
-            // Get the correct font family from the CSS variable
-            let fontFamily = 'serif';
-            if (fontRef.current) {
-                fontFamily = getComputedStyle(fontRef.current).fontFamily;
+            try {
+                // Explicitly load the font from the public directory for Canvas usage
+                // This bypasses CSS variable issues and ensures the font is available
+                const customFont = new FontFace('CustomJacquard', 'url(/fonts/Jacquard12-Regular.ttf)');
+                await customFont.load();
+                document.fonts.add(customFont);
+                loadedFontFamily = 'CustomJacquard';
+            } catch (e) {
+                console.error("Manual font loading failed, falling back to CSS variable:", e);
+                // Fallback: try to grab from computed style if manual load fails
+                if (fontRef.current) {
+                    const cssFont = getComputedStyle(fontRef.current).fontFamily;
+                    if (cssFont) {
+                        loadedFontFamily = cssFont.replace(/['"]/g, '');
+                    }
+                }
             }
 
             const canvas = document.createElement('canvas');
@@ -26,11 +38,12 @@ const JaLogo = ({ className = "" }) => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Draw "Ja" text
-            ctx.fillStyle = "black";
-            ctx.font = `180px ${fontFamily}`; // Slightly smaller to ensure fit
+            ctx.fillStyle = "#000000"; // Black fill for the mask
+            ctx.font = `180px "${loadedFontFamily}"`;
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            ctx.fillText("Ja", canvas.width / 2, canvas.height / 2 - 15); // Moved up slightly to center visually
+            // Adjust y-position slightly to center it visually
+            ctx.fillText("Ja", canvas.width / 2, canvas.height / 2 - 15);
 
             setLogoSrc(canvas.toDataURL());
         };
@@ -39,27 +52,26 @@ const JaLogo = ({ className = "" }) => {
     }, []);
 
     if (!logoSrc) {
-        // Render a hidden span to load/detect the font
+        // Render a hidden span to load/detect the font via CSS as a backup
         return <span ref={fontRef} style={{ fontFamily: 'var(--font-jacquard-12)', position: 'absolute', opacity: 0, pointerEvents: 'none' }}>Ja</span>;
     }
 
     return (
         <div className={`relative overflow-hidden bg-black rounded-lg border border-white/20 shadow-[0_0_8px_rgba(255,255,255,0.3)] ${className}`}>
-            {/* Hidden reference to keep font loaded/referenced */}
             <span ref={fontRef} style={{ fontFamily: 'var(--font-jacquard-12)', position: 'absolute', opacity: 0, pointerEvents: 'none' }}>Ja</span>
             <MetallicPaint
                 imageSrc={logoSrc}
                 scale={2}
-                contrast={0.9}
-                brightness={1.3}
+                contrast={1}
+                brightness={1.2}
                 liquid={0.1}
                 speed={0.2}
                 mouseAnimation={true}
                 patternSharpness={0.5}
                 lightColor="#ffffff"
-                darkColor="#757575" // Silver/Grey base
-                tintColor="#ffffff" // No tint (White), ensuring only 2 colors
-                fresnel={2} // Stronger edge highlighting (glow)
+                darkColor="#333333"
+                tintColor="#ffffff"
+                fresnel={2}
             />
         </div>
     );

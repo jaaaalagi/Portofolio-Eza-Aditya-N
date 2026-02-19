@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { Jacquard_12 } from "next/font/google"; // Import Jacquard 12
+// import { Jacquard_12 } from "next/font/google"; // Import Jacquard 12 - Temporarily disabled due to build error in Next 14
 import "./globals.css";
 import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
@@ -15,12 +15,10 @@ const geistSans = localFont({
   weight: "100 900",
 });
 
-const jacquard12 = Jacquard_12({
-  weight: "400",
-  subsets: ["latin"],
+const jacquard12 = localFont({
+  src: "./fonts/Jacquard12-Regular.ttf",
   variable: "--font-jacquard-12",
   display: "swap",
-  adjustFontFallback: false,
 });
 
 export const metadata = {

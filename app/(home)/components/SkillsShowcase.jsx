@@ -4,8 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiCode } from 'react-icons/hi';
 import { FaReact, FaNodeJs, FaGithub, FaAws } from 'react-icons/fa'; // FaAws tetap ada jika diperlukan, tapi tidak digunakan lagi
-import { SiExpress, SiMongodb, SiTailwindcss, SiFigma, SiGreensock, SiJavascript, SiMaterialdesign, SiAdobeillustrator, SiVisualstudiocode, SiLaravel, SiCanva, SiMysql, SiVercel } from 'react-icons/si'; // Tambah SiVercel, hapus SiThreedotjs
-import { TbBrandFramerMotion, TbBrandFramer } from 'react-icons/tb'; // TbBrandFramer untuk Framer
+import { SiExpress, SiMongodb, SiTailwindcss, SiFigma, SiGreensock, SiJavascript, SiMaterialdesign, SiAdobeillustrator, SiLaravel, SiCanva, SiMysql, SiVercel } from 'react-icons/si'; // Tambah SiVercel, hapus SiThreedotjs
+import { VscVscode } from 'react-icons/vsc'; // Use VscVscode instead of SiVisualstudiocode
+import { TbBrandFramer } from 'react-icons/tb'; // TbBrandFramer untuk Framer
 
 const skills = [
     { name: "AI", icon: <SiAdobeillustrator className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" }, // Ganti dari AWS
@@ -15,7 +16,7 @@ const skills = [
     { name: "Node.js", icon: <FaNodeJs className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" },
     { name: "GitHub", icon: <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
     { name: "Tailwind", icon: <SiTailwindcss className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Vscode", icon: <SiVisualstudiocode className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1" }, // Tukar posisi dengan Vscode
+    { name: "Vscode", icon: <VscVscode className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1" }, // Tukar posisi dengan Vscode
     { name: "Canva", icon: <SiCanva className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" }, // Ganti dari Framer Motion
     { name: "Figma", icon: <SiFigma className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" }, // Tukar posisi dengan Three.js
     { name: "Vercel", icon: <SiVercel className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" }, // Ganti dari Three.js jadi Vercel
