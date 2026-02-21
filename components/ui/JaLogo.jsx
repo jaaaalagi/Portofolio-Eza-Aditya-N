@@ -5,22 +5,27 @@ import MetallicPaint from '@/components/ui/MetallicPaint';
 
 const JaLogo = ({ className = "" }) => {
     const [logoSrc, setLogoSrc] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
     const fontRef = useRef(null);
 
     useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
+
+    useEffect(() => {
+        // Don't generate WebGL canvas on mobile — too heavy
+        if (isMobile) return;
+
         const generateLogo = async () => {
             let loadedFontFamily = 'serif';
 
             try {
-                // Explicitly load the font from the public directory for Canvas usage
-                // This bypasses CSS variable issues and ensures the font is available
                 const customFont = new FontFace('CustomJacquard', 'url(/fonts/Jacquard12-Regular.ttf)');
                 await customFont.load();
                 document.fonts.add(customFont);
                 loadedFontFamily = 'CustomJacquard';
             } catch (e) {
                 console.error("Manual font loading failed, falling back to CSS variable:", e);
-                // Fallback: try to grab from computed style if manual load fails
                 if (fontRef.current) {
                     const cssFont = getComputedStyle(fontRef.current).fontFamily;
                     if (cssFont) {
@@ -33,26 +38,42 @@ const JaLogo = ({ className = "" }) => {
             canvas.width = 300;
             canvas.height = 300;
             const ctx = canvas.getContext('2d');
-
-            // Clear canvas (transparent)
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw "Ja" text
-            ctx.fillStyle = "#000000"; // Black fill for the mask
+            ctx.fillStyle = "#000000";
             ctx.font = `180px "${loadedFontFamily}"`;
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            // Adjust y-position slightly to center it visually
             ctx.fillText("Ja", canvas.width / 2, canvas.height / 2 - 15);
 
             setLogoSrc(canvas.toDataURL());
         };
 
         generateLogo();
-    }, []);
+    }, [isMobile]);
+
+    // Mobile: render lightweight CSS gradient text instead of WebGL2 shader
+    if (isMobile) {
+        return (
+            <div className={`relative overflow-hidden bg-black rounded-lg border border-white/20 shadow-[0_0_8px_rgba(255,255,255,0.3)] flex items-center justify-center ${className}`}>
+                <span
+                    style={{
+                        fontFamily: 'var(--font-jacquard-12)',
+                        fontSize: '1.6rem',
+                        background: 'linear-gradient(135deg, #ffffff 0%, #aaaaaa 50%, #ffffff 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        lineHeight: 1,
+                        display: 'block',
+                    }}
+                >
+                    Ja
+                </span>
+            </div>
+        );
+    }
 
     if (!logoSrc) {
-        // Render a hidden span to load/detect the font via CSS as a backup
         return <span ref={fontRef} style={{ fontFamily: 'var(--font-jacquard-12)', position: 'absolute', opacity: 0, pointerEvents: 'none' }}>Ja</span>;
     }
 

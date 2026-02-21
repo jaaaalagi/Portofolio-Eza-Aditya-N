@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/components/ui/PixelSnow.css"],"sourcesContent":[".pixel-snow-container {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: relative;\r\n    overflow: hidden;\r\n    contain: layout style paint;\r\n}\r\n\r\n.pixel-snow-container canvas {\r\n    display: block;\r\n    width: 100%;\r\n    height: 100%;\r\n    transform: translateZ(0);\r\n    will-change: transform;\r\n    backface-visibility: hidden;\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA"}},
-    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

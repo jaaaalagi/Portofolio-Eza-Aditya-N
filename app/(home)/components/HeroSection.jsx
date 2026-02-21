@@ -9,7 +9,9 @@ import { BackgroundPresets } from '@/components/ui/background-effects';
 import { motion } from 'framer-motion';
 import SkillsShowcase from './SkillsShowcase';
 import VariableProximity from '@/components/ui/VariableProximity';
-import PixelSnow from '@/components/ui/PixelSnow';
+import dynamic from 'next/dynamic';
+
+const PixelSnow = dynamic(() => import('@/components/ui/PixelSnow'), { ssr: false });
 
 const containerAnimation = {
   hidden: { opacity: 0 },

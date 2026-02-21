@@ -1,5 +1,5 @@
 "use client";
-import { forwardRef, useMemo, useRef, useEffect } from 'react';
+import { forwardRef, useMemo, useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 function useAnimationFrame(callback) {
@@ -62,6 +62,11 @@ const VariableProximity = forwardRef((props, ref) => {
     const interpolatedSettingsRef = useRef([]);
     const mousePositionRef = useMousePositionRef(containerRef);
     const lastPositionRef = useRef({ x: null, y: null });
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
 
     const parsedSettings = useMemo(() => {
         const parseSettings = settingsStr =>
@@ -101,6 +106,7 @@ const VariableProximity = forwardRef((props, ref) => {
     };
 
     useAnimationFrame(() => {
+        if (isMobile) return; // Skip expensive DOM measurements on mobile
         if (!containerRef?.current) return;
         const containerRect = containerRef.current.getBoundingClientRect();
         const { x, y } = mousePositionRef.current;

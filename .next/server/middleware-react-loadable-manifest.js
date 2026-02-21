@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\(home)\\\\components\\\\HeroSection.jsx -> @/components/ui/PixelSnow\":{\"id\":\"app\\\\(home)\\\\components\\\\HeroSection.jsx -> @/components/ui/PixelSnow\",\"files\":[\"static/css/_app-pages-browser_components_ui_PixelSnow_jsx.css\",\"static/chunks/_app-pages-browser_components_ui_PixelSnow_jsx.js\"]}}"
