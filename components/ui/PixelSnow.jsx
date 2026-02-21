@@ -199,8 +199,6 @@ export default function PixelSnow({
     setIsMobile(window.innerWidth < 768);
   }, []);
 
-  // Skip WebGL entirely on mobile to prevent GPU crashes
-  if (isMobile) return null;
 
   // Memoize shader variant value
   const variantValue = useMemo(() => {
@@ -250,7 +248,7 @@ export default function PixelSnow({
   // Main Three.js setup - only runs once
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container || isMobile) return; // Skip WebGL on mobile
 
     const scene = new Scene();
     const camera = new OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -358,6 +356,9 @@ export default function PixelSnow({
     direction,
     colorVector
   ]);
+
+  // Skip rendering on mobile — WebGL not initialized above
+  if (isMobile) return null;
 
   return <div ref={containerRef} className={`pixel-snow-container ${className}`} style={style} />;
 }
