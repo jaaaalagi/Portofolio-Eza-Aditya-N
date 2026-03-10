@@ -71,6 +71,15 @@ export const config = {
             technologies: ["Python", "TensorFlow.js", "D3.js", "Next.js", "WebGL", "TypeScript"],
             github: "#",
             demo: "https://drive.google.com/file/d/1vl745s7TyoZN5w5TD9UblBqeltfyLr6V/view?usp=sharing"
+        },
+        {
+            id: 7,
+            title: "Brand Identity Design Label Product for GOERIIH KITCHEN",
+            description: "Designed product labels for GOERIIH KITCHEN, applied across all packaging. Created cohesive and brand-aligned label designs using Canva.",
+            image: "/projects/BrandIdentity_Goeriih.png",
+            technologies: ["Canva", "Brand Identity Design", "Graphic Design", "Design Strategy", "Custom Typography"],
+            github: "#",
+            demo: "https://drive.google.com/file/d/1nGo-Iazg0TQZnu91c8XZcvunp8gUWutl/view?usp=sharing"
         }
 
     ],

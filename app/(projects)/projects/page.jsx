@@ -16,7 +16,7 @@ const ProjectsPage = () => {
                     blurAmount="3xl"
                 />
 
-                <div className="relative">/
+                <div className="relative">
                     <SectionTitle />
                     <ProjectsList projects={config.projects} />
                 </div>
